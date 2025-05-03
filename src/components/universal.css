@@ -1,0 +1,15 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: 'MS Sans Serif', sans-serif; 
+    background-color: #202020;
+  }
+  a {
+    text-decoration: inherit;
+  }

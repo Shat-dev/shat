@@ -1,0 +1,49 @@
+.homepage-body {
+  display: flex;
+  place-items: center;
+}
+
+@font-face {
+  font-family: 'MS Sans Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: url('src/assets/MS Sans Serif.ttf') format('truetype');
+}
+.search-bar {
+  background-color: #202020;
+  border: 2px solid rgb(243, 243, 243);
+  color: rgb(237, 237, 237);
+  padding: 18px 50px;
+  font-size: 26px;
+  border-radius: 2px;
+  outline: none;
+  font-family: 'MS Sans Serif', sans-serif;
+  margin-right: -2px;
+}
+.search-bar::placeholder {
+  color: rgb(180, 180, 180);
+}
+
+.enter-button {
+  background-color: #202020;
+  border: 2px solid rgb(243, 243, 243);
+  color: rgb(237, 237, 237);
+  padding: 18px 50px;
+  font-size: 26px;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: 'MS Sans Serif', sans-serif;
+}
+
+.enter-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.enter-button:focus {
+  outline: none;
+}
+

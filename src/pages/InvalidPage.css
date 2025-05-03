@@ -1,0 +1,66 @@
+.homepage-body.notfound-body {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: -100px;
+    display: flex;
+  }
+  
+  .notfound-content {
+    text-align: center;
+    font-family: 'MS Sans Serif', sans-serif;
+    color: rgb(237, 237, 237);
+  }
+  
+  .notfound-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .notfound-text {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  /* 🌐 Responsive scaling for smaller screens */
+  @media (max-width: 768px) {
+    .notfound-title {
+      font-size: 36px;
+    }
+  
+    .notfound-text {
+      font-size: 20px;
+    }
+  
+    .enter-button {
+      font-size: 22px;
+      padding: 14px 40px;
+    }
+  
+    .search-bar {
+      font-size: 22px;
+      padding: 14px 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .notfound-title {
+      font-size: 28px;
+    }
+  
+    .notfound-text {
+      font-size: 18px;
+    }
+  
+    .enter-button {
+      font-size: 18px;
+      padding: 12px 30px;
+    }
+  
+    .search-bar {
+      font-size: 18px;
+      padding: 12px 30px;
+    }
+  }
+  

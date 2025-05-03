@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+    .left-side-fixed-content {
+      position: static;
+      width: 100%;
+      left: 0;
+    }
+  
+    .right-side {
+      margin-left: 0;
+    }
+  
+    .positions {
+      display: block;
+    }
+  }
+  

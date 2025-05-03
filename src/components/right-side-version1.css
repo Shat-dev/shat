@@ -1,0 +1,79 @@
+.right-side {
+    background-color: #C6C6C6;
+    margin-left: calc(220px + 2rem); /* same as left-side width + gap */
+    margin-right: -10px;
+    min-height: 170vh;
+  }
+  
+  .right-side-text {
+    color: #858585;
+    font-size: 15px;
+    font-weight: 400;
+    font-family:  'MS Sans Serif';
+    
+  }
+  .computer-image {
+    width: 55%;
+    height: auto;
+    min-width: 150px;
+    max-width: 225px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    transition: transform 0.2s ease; /* Smooth hover effect */
+    position: relative; /* or absolute/fixed if needed for layout */
+    z-index: 1; /* Lower than header */
+  }
+  
+  .computer-image:hover {
+    transform: scale(1.05); /* Grows by 5% on hover */
+  }
+  
+  .right-side-computer {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* optional: vertical centering */
+  margin-top: 40px;
+  margin-bottom: 30px;
+  }
+  .right-side-titles {
+    color: #101010;
+    font-size: 18px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+    font-family: 'MS Sans Serif';
+  }
+  
+  .right-side-logos, .right-side-logos-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* optional: vertical centering */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 100px; /* optional: spacing between logos */
+  }
+  .right-side-logos-bottom {
+    margin-bottom: 70px;
+  }
+  
+  .below-logo-text {
+    font-family: 'MS Sans Serif';
+    color: #101010;
+    font-size: 9px;
+  }
+  .logo-icons {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .logo-icons:hover {
+    transform: scale(1.10);
+  }
+  
+  
+  @media (min-width: 1200px) {
+    .right-side {
+      margin-right: 0;
+      width: calc(100%); /* More space for right-side when screen is large */
+    }
+  }
+  
