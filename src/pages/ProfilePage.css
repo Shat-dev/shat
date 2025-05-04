@@ -1,12 +1,17 @@
 .Shat-webpage {
   padding-top: 85px;
   font-family: 'MS Sans Serif';
+  src: url('/assets/MS Sans Serif.ttf') format('truetype');
   background-color: #202020;
   color: rgb(237, 237, 237);
 }
 #root {
   background-color: #202020;
 }
+body {
+  font-family: 'MS Sans Serif', sans-serif;
+}
+
 .social-icons {
   margin-top: 100px;
   display: flex;

@@ -1,15 +1,24 @@
+@font-face {
+  font-family: 'MS Sans Serif';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/MS Sans Serif.ttf') format('truetype');
+}
+
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  body {
-    margin: 0;
-    min-width: 320px;
-    min-height: 100vh;
-    font-family: 'MS Sans Serif', sans-serif; 
-    background-color: #202020;
-  }
-  a {
-    text-decoration: inherit;
-  }
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'MS Sans Serif', sans-serif;
+  background-color: #202020;
+}
+
+a {
+  text-decoration: inherit;
+}

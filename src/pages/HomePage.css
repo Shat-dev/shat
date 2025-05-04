@@ -7,8 +7,12 @@
   font-family: 'MS Sans Serif';
   font-style: normal;
   font-weight: normal;
-  src: url('src/assets/MS Sans Serif.ttf') format('truetype');
+  src: url('/assets/MS Sans Serif.ttf') format('truetype');
 }
+body {
+  font-family: 'MS Sans Serif', sans-serif;
+}
+
 .search-bar {
   background-color: #202020;
   border: 2px solid rgb(243, 243, 243);
