@@ -21,18 +21,21 @@ export function ProfilePage() {
 
     return (
         <>
-            <div className="Shat-webpage">
+            <div className="Shat-webpage w-full overflow-x-hidden">
                 <div className="layout-container">
                     <div className="
                         grid grid-cols-[2fr_3fr] gap-8 ml-[31px] mr-[31px]
                         max-[1024px]:flex max-[1024px]:flex-col
                         max-[600px]:block max-[600px]:ml-0 max-[600px]:mr-0
+                        max-[480px]:px-4 max-[480px]:ml-0 max-[480px]:mr-0
                         ">
                         <div className="max-[1024px]:w-full">
                             <div className="fixed top-[120px] left-[calc((100vw-1000px)/2+31px)] w-[250px] bg-[#202020] text-[rgb(237,237,237)]
                                         max-[1024px]:relative max-[1024px]:top-auto max-[1024px]:left-auto max-[1024px]:w-full max-[1024px]:px-[10px]
-                                        max-[600px]:px-[16px] max-[600px]:top-0 max-[600px]:left-0 max-[600px]:text-left"
-                            >
+                                        max-[600px]:px-[16px] max-[600px]:top-0 max-[600px]:left-0 max-[600px]:text-left 
+                                        max-[480px]:left-0 max-[480px]:top-0 max-[480px]:relative max-[480px]:w-full
+                                        "
+                                    >
                                 <div className="mb-[70px] max-[600px]: -mt-[30px] pt-[10px] max-[600px]: -mt-[50px] mb-[90px]">
                                     <p className="font-semibold text-[rgb(237,237,237)] text-[30px] leading-[50px] [word-spacing:0.3rem]">
                                         Hi
