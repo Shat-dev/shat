@@ -102,12 +102,16 @@ export function ProfilePage() {
                             </div>
                         )}
                     </div>
-                    <div className="positions">
-                        <div className="left-side">
+                    <div className="
+                        grid grid-cols-[2fr_3fr] gap-8 ml-[31px] mr-[31px]
+                        max-[1024px]:flex max-[1024px]:flex-col
+                        max-[600px]:block max-[600px]:ml-0 max-[600px]:mr-0
+                        ">
+                        <div className="max-[1024px]:w-full">
                             <div className="fixed top-[85px] left-[calc((100vw-1000px)/2+31px)] w-[250px] bg-[#202020] text-[rgb(237,237,237)]
                                         max-[1024px]:relative max-[1024px]:top-auto max-[1024px]:left-auto max-[1024px]:w-full max-[1024px]:px-[10px]
                                         max-[600px]:px-[16px] max-[600px]:top-0 max-[600px]:left-0 max-[600px]:text-left"
-                                    >
+                            >
                                 <div className="mb-[70px] max-[600px]: -mt-[30px] pt-[10px]">
                                     <p className="font-semibold text-[rgb(237,237,237)] text-[30px] leading-[50px] [word-spacing:0.3rem] max-[600px]:text-[22px]">
                                         Hi
@@ -165,7 +169,7 @@ export function ProfilePage() {
                             <div id="about">
                                 <span className="right-side-titles">About</span>
                                 <br />
-                                <span className="right-side-text">
+                                <span className="block text-center mx-auto leading-[3]">
                                     Sydney based freelance website designer who turns pixels and code into cool things for you to click. <br />
                                     Passionate about Web3 and building the decentralized internet. <br />
                                     Open to collaborations.
@@ -189,6 +193,10 @@ export function ProfilePage() {
                                         </div>
                                     </div>
                                     <div className="right-side-logos-bottom">
+                                        <div>
+                                            <img src="tailwind-css-2.svg" className="logo-icons" />
+                                            <span className="below-logo-text">TailwindCSS</span>
+                                        </div>
                                         <div>
                                             <img src="react-2.svg" alt="react" className="logo-icons" />
                                             <span className="below-logo-text">React</span>

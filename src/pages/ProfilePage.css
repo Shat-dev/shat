@@ -45,19 +45,7 @@ body {
   scroll-margin-top: 105px;
 }
 
-.positions {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 2rem;
-  margin-left: 31px;
-  margin-right: 31px;
-}
 
-.left-side {
-  background-color: #202020;
-  position: relative;
-  color: rgb(237, 237, 237);
-}
 
 
 /* -------------------- */
@@ -81,19 +69,8 @@ body {
     padding-left: 0px
   }
 
-  .positions {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-left: 16px;
-    margin-right: 16px;
-    align-items: center; /* Center content inside the positions */
-  }
 
-  .left-side {
-    width: 100%;
-    position: relative;
-  }
+
 
   .right-side {
     margin-left: 0;
@@ -117,18 +94,7 @@ body {
     padding-left: 16px;
     padding-right: 16px;
   }
-  .positions {
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left; /* <-- important: keep text left-aligned */
-  }
 
-  .left-side {
-    background-color: #202020;
-    width: 100%;
-    text-align: left; /* <-- important */
-  }
 
   .right-side-logos,
   .right-side-logos-bottom {
@@ -163,8 +129,8 @@ body {
     flex-wrap: wrap;
   }
   .right-side-logos {
-    margin-bottom: 40px;
-    line-height: 0px;
+    margin-bottom: 5px;
+    line-height: 20px;
   }
 }
 
@@ -182,9 +148,6 @@ body {
   font-weight: 600;
 }
 
-.right-side-text {
-  line-height: 30px;
-}
 
 .right-side-blocks {
   margin-top: 30px;
@@ -305,15 +268,6 @@ body {
   height: 100px;
 }
 
-.right-side-text {
-  display: block; /* Ensures they behave like block elements */
-  text-align: center; /* Centers the text inside */
-  margin: 0 auto; /* Centers the block itself if needed */
-}
-
-.right-side-text {
-  line-height: 3; /* Optional: Better readability */
-}
 
 
 /* Position the top-bar with the Connect Wallet button fixed at the top-right */
