@@ -8,12 +8,6 @@ export function ProfilePage() {
     const location = useLocation();
     const name = location.state?.name || '';
     const form = useRef();
-    const [walletAddress, setWalletAddress] = useState(null);
-    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-    const [showPopup, setShowPopup] = useState(false);
-    const [isPopupVisible, setIsPopupVisible] = useState(true); // New state to control popup visibility
-    const popupRef = useRef();
-
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_5ua09f6', 'template_nuyz2y9', form.current, 'hHevB0Sc509ZhaCD8')
@@ -25,95 +19,22 @@ export function ProfilePage() {
             });
     };
 
-    const connectPhantom = async () => {
-        if (window.solana && window.solana.isPhantom) {
-            try {
-                const response = await window.solana.connect();
-                const address = response.publicKey.toString();
-                setWalletAddress(address);
-                setShowPopup(true); // Show popup after connection
-                setIsPopupVisible(true); // Make popup visible immediately
-            } catch (err) {
-                console.error("User rejected the Phantom connection", err);
-            }
-        } else {
-            alert('Please install Phantom Wallet!');
-        }
-    };
-
-    const toggleDropdown = () => {
-        setIsDropdownVisible(!isDropdownVisible);
-    };
-
-    // Handle click outside of the popup to hide it
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (popupRef.current && !popupRef.current.contains(event.target)) {
-                setIsPopupVisible(false); // Hide popup if clicked outside
-            }
-        };
-
-        document.addEventListener('click', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
-
     return (
         <>
             <div className="Shat-webpage">
                 <div className="layout-container">
-                    {/* Header with Connect Wallet */}
-                    <div className="top-bar">
-                        {walletAddress ? (
-                            <div className="wallet-connected">
-                                <p className="wallet-address" onClick={toggleDropdown}>
-                                    Connected: {walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}
-                                </p>
-
-                                {isDropdownVisible && (
-                                    <div className="wallet-dropdown">
-                                        <button className="disconnect-button" onClick={() => {
-                                            setWalletAddress(null);
-                                            setShowPopup(false);
-                                            setIsDropdownVisible(false);
-                                        }}>
-                                            Disconnect
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
-                        ) : (
-                            <button onClick={connectPhantom} className="connect-wallet-btn">
-                                Connect Wallet
-                            </button>
-                        )}
-
-                        {showPopup && isPopupVisible && (
-                            <div ref={popupRef} className="wallet-popup">
-                                <img src="/y2k-favicon.svg" alt="Thank You Icon" className="thank-you-icon" />
-                                <strong>
-                                    Thanks {walletAddress.slice(0, 6)}...{walletAddress.slice(-4)}
-                                </strong>
-                                <p>
-                                    Shat appreciates you for coming all this way. As a thank you, you've been whitelisted for an upcoming free NFT mint — coming soon.
-                                </p>
-                            </div>
-                        )}
-                    </div>
                     <div className="
                         grid grid-cols-[2fr_3fr] gap-8 ml-[31px] mr-[31px]
                         max-[1024px]:flex max-[1024px]:flex-col
                         max-[600px]:block max-[600px]:ml-0 max-[600px]:mr-0
                         ">
                         <div className="max-[1024px]:w-full">
-                            <div className="fixed top-[85px] left-[calc((100vw-1000px)/2+31px)] w-[250px] bg-[#202020] text-[rgb(237,237,237)]
+                            <div className="fixed top-[120px] left-[calc((100vw-1000px)/2+31px)] w-[250px] bg-[#202020] text-[rgb(237,237,237)]
                                         max-[1024px]:relative max-[1024px]:top-auto max-[1024px]:left-auto max-[1024px]:w-full max-[1024px]:px-[10px]
                                         max-[600px]:px-[16px] max-[600px]:top-0 max-[600px]:left-0 max-[600px]:text-left"
                             >
-                                <div className="mb-[70px] max-[600px]: -mt-[30px] pt-[10px]">
-                                    <p className="font-semibold text-[rgb(237,237,237)] text-[30px] leading-[50px] [word-spacing:0.3rem] max-[600px]:text-[22px]">
+                                <div className="mb-[70px] max-[600px]: -mt-[30px] pt-[10px] max-[600px]: -mt-[50px] mb-[90px]">
+                                    <p className="font-semibold text-[rgb(237,237,237)] text-[30px] leading-[50px] [word-spacing:0.3rem]">
                                         Hi
                                         {name ? (
                                             <>
@@ -124,28 +45,28 @@ export function ProfilePage() {
                                         ) : (
                                             ", "
                                         )}
-                                        I'm <span className="text-[42px] text-[rgb(237,237,237)] max-[600px]:text-[32px]">Shat</span>
+                                        I'm <span className="text-[42px] text-[rgb(237,237,237)]">Shat</span>
                                         <br />
-                                        I create <span className="relative text-[30px] font-bold bg-[#e1e1e1] text-[#202020] px-1 py-0.5 rounded-sm max-[600px]:text-[22px]">
+                                        I create <span className="relative text-[30px] font-bold bg-[#e1e1e1] text-[#202020] px-1 py-0.5 rounded-sm ">
                                             websites. </span>
                                     </p>
-                                    <p className="text-[rgb(200,200,200)] text-[15px] font-bold mt-5 max-[600px]:text-[13px]">Front End Developer</p>
+                                    <p className="text-[rgb(200,200,200)] text-[15px] font-bold mt-5 ">Front End Developer</p>
                                 </div>
-                                <div className="flex flex-col items-start">
+                                <div className="flex flex-col items-start -mt-[20px]">
                                     <button
-                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1025px]:hidden"
+                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1024px]:hidden"
                                         onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
                                     >
                                         About
                                     </button>
                                     <button
-                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1025px]:hidden"
+                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1024px]:hidden"
                                         onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
                                     >
                                         Experience
                                     </button>
                                     <button
-                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1025px]:hidden"
+                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1024px]:hidden"
                                         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                                     >
                                         Contact

@@ -45,95 +45,6 @@ body {
   scroll-margin-top: 105px;
 }
 
-
-
-
-/* -------------------- */
-/* ✅ RESPONSIVE CHANGES */
-/* -------------------- */
-@media screen and (max-width: 1024px) {
-  body, .layout-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
-
-  .social-icons {
-    margin-top: -50px;
-    display: flex;
-    gap: 15px;
-    justify-content: left;
-    padding-left: 0px
-  }
-
-
-
-
-  .right-side {
-    margin-left: 0;
-    width: 100%;
-  }
-  .right-side {
-    padding-left: 0px;
-    padding-bottom: 0px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  body, .layout-container {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    min-height: 100vh;
-    margin: 0;
-  }
-
-  .layout-container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-
-  .right-side-logos,
-  .right-side-logos-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .right-side-logos svg,
-  .right-side-logos-bottom svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .social-icons {
-    margin-top: -50px;
-    display: flex;
-    gap: 15px;
-    justify-content: flex-start; /* <-- instead of "left", use "flex-start" */
-    padding-left: 0px;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 462px) {
-  .right-side-logos,
-  .right-side-logos-bottom {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem; /* Reduced gap to tighten up the space */
-    flex-wrap: wrap;
-  }
-  .right-side-logos {
-    margin-bottom: 5px;
-    line-height: 20px;
-  }
-}
-
 .right-side {
   padding-left: 20px;
   padding-bottom: 355px;
@@ -147,7 +58,6 @@ body {
   margin-top: 0px;
   font-weight: 600;
 }
-
 
 .right-side-blocks {
   margin-top: 30px;
@@ -221,13 +131,13 @@ body {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
-  background-color: transparent; /* <- make it transparent */
+  background-color: transparent;
   font-family: 'MS Sans Serif', sans-serif;
 }
 
 .contact-form input,
 .contact-form textarea {
-  background-color: transparent; /* <- make it transparent */
+  background-color: transparent; 
   border: 2px solid rgb(243, 243, 243);
   color: rgb(237, 237, 237);
   padding: 10px 12px;
@@ -238,7 +148,7 @@ body {
 }
 
 .contact-form button {
-  background-color: transparent; /* <- make it transparent */
+  background-color: transparent;
   border: 2px solid rgb(243, 243, 243);
   color: rgb(237, 237, 237);
   padding: 10px 20px;
@@ -247,8 +157,6 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-family: 'MS Sans Serif', sans-serif;
 }
-
-/* Button hover can still highlight separately */
 .contact-form button:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -257,7 +165,6 @@ body {
   transform: translateY(1px);
 }
 
-/* Make sure when #contact is hovered, form and children feel the same */
 #contact:hover .contact-form,
 #contact:hover .contact-form input,
 #contact:hover .contact-form textarea,
@@ -268,161 +175,41 @@ body {
   height: 100px;
 }
 
+@media screen and (max-width: 1024px) {
+  body, .layout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
 
+  .social-icons {
+    margin-top: -50px;
+    display: flex;
+    gap: 15px;
+    justify-content: left;
+    padding-left: 0px
+  }
 
-/* Position the top-bar with the Connect Wallet button fixed at the top-right */
-.top-bar {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
+  .right-side {
+    width: 100%;
+  }
+  .right-side {
+    padding-left: 5px;
+    padding-bottom: 0px;
+    padding-right: 15px;
+  }
 }
 
-/* Dropdown styles */
-.wallet-dropdown {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  z-index: 9999;
-}
-
-.dropdown-item {
-  color: #333;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
-}
-
-
-/* Styling for the wallet address when connected */
-.wallet-address {
-  color: #333;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.connect-wallet-btn {
-  border-radius: 12px;
-  padding: 6px 14px;
-  height: 40px;
-  font-size: 15px;
-  background-color: #383838;
-  border: none;
-  color: rgb(237, 237, 237);
-  cursor: pointer;
-}
-
-.phantom-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.phantom-icon {
-  height: 24px;
-  transition: transform 0.2s ease;
-}
-
-.phantom-button:hover .phantom-icon {
-  transform: scale(1.1);
-}
-
-.wallet-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 24px;
-  z-index: 1000;
-  width: 340px;
-  max-width: 340px;
-  height: auto;
-  min-height: 120px;
-  text-align: center;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
-  font-family: sans-serif;
-  animation: fadeIn 0.4s ease-in-out;
-  border-bottom-color: rgb(226, 232, 240);
-  border-bottom-left-radius: 21px;
-  border-bottom-right-radius: 21px;
-  border-bottom-style: solid;
-  border-bottom-width: 0px;
-  border-left-color: rgb(226, 232, 240);
-  border-left-style: solid;
-  border-left-width: 0px;
-  border-right-color: rgb(226, 232, 240);
-  border-right-style: solid;
-  border-right-width: 0px;
-  border-top-color: rgb(226, 232, 240);
-  border-top-left-radius: 21px;
-  border-top-right-radius: 21px;
-  border-top-style: solid;
-  border-top-width: 0px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-  box-sizing: border-box;
-  color: rgb(0, 0, 0);
-  opacity: 1;
-  transition: opacity 0.3s ease-out; /* Only transitioning opacity */
-}
-
-.wallet-popup.hidden {
-  opacity: 0;
-  transition: opacity 0.3s ease-out; /* Fade out */
-}
-
-
-.wallet-popup strong {
-  font-size: 18px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.wallet-popup p {
-  font-size: 15px;
-  margin: 0;
-  line-height: 1.5;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translate(-50%, -60%); }
-  to { opacity: 1; transform: translate(-50%, -50%); }
-}
-
-.thank-you-icon {
-  width: 150px; /* Adjust size */
-  height: 150px; /* Adjust size */
-  margin-bottom: 12px; /* Add space below image */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wallet-address {
-  transition: color 0.2s ease-in-out;
-}
-
-.wallet-address:hover {
-  color: rgb(237, 237, 237);
-  cursor: pointer;
-}
-
-.disconnect-button {
-  border-radius: 12px;
-  padding: 6px 14px;
-  height: 40px;
-  font-size: 15px;
-  background-color: #383838;
-  border: none;
-  color: rgb(237, 237, 237);
-  cursor: pointer;
+@media screen and (max-width: 600px) {
+  .social-icons {
+    margin-top: -50px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; /* <-- instead of "left", use "flex-start" */
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
 }
