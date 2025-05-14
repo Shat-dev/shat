@@ -40,70 +40,6 @@ body {
   color: rgb(237, 237, 237);
 }
 
-.top-text-name {
-  font-weight: 600;
-  color: rgb(237, 237, 237);
-  font-size: 30px;
-  line-height: 50px;
-  word-spacing: 0.3rem;
-}
-
-.top-text-Shat {
-  font-size: 45px;
-  color: rgb(237, 237, 237);
-}
-
-.top-text-title {
-  color: rgb(200, 200, 200);
-  font-size: 15px;
-  font-weight: 700;
-  margin-top: -20px;
-}
-
-.top-text {
-  margin-bottom: 70px;
-}
-
-.top-text-colour{
-  position: relative;
-  font-size: 30px;
-  font-weight: 700;
-  background-color: #e1e1e1; /* Highlight color */
-  color: #202020;            /* Text color */
-  padding: 2px 4px;          /* Optional: some padding to make the highlight look better */
-  border-radius: 2px;   
-}
-
-.unique-tabs button {
-  display: block;
-  margin-top: 30px;
-  background-color: transparent;
-  border: 2px solid rgb(243, 243, 243);
-  color: rgb(237, 237, 237);
-  padding-top: 18px;
-  padding-bottom: 18px;
-  width: 180px;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-  position: relative;
-  overflow: hidden;
-  font-family: 'MS Sans Serif';
-  font-style: normal;
-  font-weight: normal;
-  background-color: #202020/* light translucent touch */
-}
-
-.unique-tabs button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.unique-tabs button:focus {
-  outline: none;
-}
-
 
 #about, #experience, #contact {
   scroll-margin-top: 105px;
@@ -123,14 +59,6 @@ body {
   color: rgb(237, 237, 237);
 }
 
-.left-side-fixed-content {
-  position: fixed;
-  top: 85px;
-  left: calc((100vw - 1000px) / 2 + 31px);
-  width: 250px;
-  background-color: #202020;
-  color: rgb(237, 237, 237);
-}
 
 /* -------------------- */
 /* ✅ RESPONSIVE CHANGES */
@@ -167,14 +95,6 @@ body {
     position: relative;
   }
 
-  .left-side-fixed-content {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 100%;
-    padding: 0 10px;
-  }
-
   .right-side {
     margin-left: 0;
     width: 100%;
@@ -182,10 +102,6 @@ body {
   .right-side {
     padding-left: 0px;
     padding-bottom: 0px;
-  }
-
-  .unique-tabs button {
-    display: none;
   }
 }
 
@@ -197,42 +113,10 @@ body {
     margin: 0;
   }
 
-  .left-side-fixed-content {
-    position: relative;
-    width: 100%;
-    padding: 0 16px;
-    top: 0;
-    left: 0;
-    background-color: #202020;
-    text-align: left; /* Make sure text stays left-aligned */
-  }
-
   .layout-container {
     padding-left: 16px;
     padding-right: 16px;
   }
-
-  .top-text-name {
-    font-size: 22px;
-    line-height: 1.4;
-  }
-
-  .top-text-Shat {
-    font-size: 32px;
-  }
-
-  .top-text-colour {
-    font-size: 22px;
-  }
-
-  .top-text-title {
-    font-size: 13px;
-  }
-
-  .unique-tabs button {
-    display: none;
-  }
-
   .positions {
     display: block;
     margin-left: 0;
@@ -258,11 +142,6 @@ body {
   .right-side-logos-bottom svg {
     width: 20px;
     height: 20px;
-  }
-
-  .top-text {
-    margin-top: -30px;
-    padding-top: 10px;
   }
 
   .social-icons {
@@ -436,12 +315,6 @@ body {
   line-height: 3; /* Optional: Better readability */
 }
 
-.top-text-username {
-  background-color: #e1e1e1; /* Highlight color */
-  color: #202020;            /* Text color */
-  padding: 2px 4px;          /* Optional: some padding to make the highlight look better */
-  border-radius: 2px;        /* Optional: rounded corners */
-}
 
 /* Position the top-bar with the Connect Wallet button fixed at the top-right */
 .top-bar {

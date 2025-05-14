@@ -104,36 +104,50 @@ export function ProfilePage() {
                     </div>
                     <div className="positions">
                         <div className="left-side">
-                            <div className="left-side-fixed-content">
-                                <div className="top-text">
-                                    <p className="top-text-name">
+                            <div className="fixed top-[85px] left-[calc((100vw-1000px)/2+31px)] w-[250px] bg-[#202020] text-[rgb(237,237,237)]
+                                        max-[1024px]:relative max-[1024px]:top-auto max-[1024px]:left-auto max-[1024px]:w-full max-[1024px]:px-[10px]
+                                        max-[600px]:px-[16px] max-[600px]:top-0 max-[600px]:left-0 max-[600px]:text-left"
+                                    >
+                                <div className="mb-[70px] max-[600px]: -mt-[30px] pt-[10px]">
+                                    <p className="font-semibold text-[rgb(237,237,237)] text-[30px] leading-[50px] [word-spacing:0.3rem] max-[600px]:text-[22px]">
                                         Hi
                                         {name ? (
                                             <>
                                                 {" "}
-                                                <span className="top-text-username">{name},</span>
+                                                <span className="bg-[#e1e1e1] text-[#202020] px-1 py-0.5 rounded-sm">{name},</span>
                                                 <br />
                                             </>
                                         ) : (
                                             ", "
                                         )}
-                                        I'm <span className="top-text-Shat">Shat</span>
+                                        I'm <span className="text-[42px] text-[rgb(237,237,237)] max-[600px]:text-[32px]">Shat</span>
                                         <br />
-                                        I create <span className="top-text-colour">websites.</span>
+                                        I create <span className="relative text-[30px] font-bold bg-[#e1e1e1] text-[#202020] px-1 py-0.5 rounded-sm max-[600px]:text-[22px]">
+                                            websites. </span>
                                     </p>
-                                    <p className="top-text-title">Front End Developer</p>
+                                    <p className="text-[rgb(200,200,200)] text-[15px] font-bold mt-5 max-[600px]:text-[13px]">Front End Developer</p>
                                 </div>
-                                <div className="unique-tabs">
-                                    <button onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}>
+                                <div className="flex flex-col items-start">
+                                    <button
+                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1025px]:hidden"
+                                        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+                                    >
                                         About
                                     </button>
-                                    <button onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    <button
+                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1025px]:hidden"
+                                        onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+                                    >
                                         Experience
                                     </button>
-                                    <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    <button
+                                        className="block mt-[30px] bg-[#202020] border-2 border-[rgb(243,243,243)] text-[rgb(237,237,237)] pt-[18px] pb-[18px] w-[180px] text-center text-[16px] rounded-[2px] cursor-pointer transition-transform duration-200 ease-in-out relative overflow-hidden not-italic font-normal hover:bg-[rgba(255,255,255,0.1)] focus:outline-none max-[1025px]:hidden"
+                                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                                    >
                                         Contact
                                     </button>
                                 </div>
+
                                 <div className="social-icons">
                                     <a href="https://x.com/shat_xyz" target="_blank" rel="noopener noreferrer">
                                         <img src="x-2.svg" />
