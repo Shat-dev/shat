@@ -197,11 +197,6 @@ body {
   .right-side {
     width: 100%;
   }
-  .right-side {
-    padding-left: 5px;
-    padding-bottom: 0px;
-    padding-right: 15px;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -218,8 +213,6 @@ body {
 @media screen and (max-width: 480px) {
   .Shat-webpage {
     overflow-x: hidden;
-    margin-left: -10px;
-    margin-right: 5px;
   }
   .contact-form {
     width: 100%;
