@@ -120,13 +120,13 @@ export function ProfilePage() {
                                         </div>
                                         <div>
                                             <img src="javascript-r.svg" alt="js" className="logo-icons" />
-                                            <span className="below-logo-text">JavaScript</span>
+                                            <span className="below-logo-text">JS</span>
                                         </div>
                                     </div>
                                     <div className="right-side-logos-bottom">
                                         <div>
                                             <img src="tailwind-css-2.svg" className="logo-icons" />
-                                            <span className="below-logo-text">TailwindCSS</span>
+                                            <span className="below-logo-text">TwCSS</span>
                                         </div>
                                         <div>
                                             <img src="react-2.svg" alt="react" className="logo-icons" />

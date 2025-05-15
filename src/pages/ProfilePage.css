@@ -110,7 +110,6 @@ body {
   text-align: center;
   color: rgb(237, 237, 237);
 }
-
 #about,
 #experience,
 #projects,
@@ -224,6 +223,10 @@ body {
   }
   .contact-form {
     width: 100%;
+  }
+  .right-side-logos,
+  .right-side-logos-bottom {
+    gap: 4rem;
   }
 }
 
