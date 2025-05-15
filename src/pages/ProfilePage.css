@@ -5,6 +5,7 @@
   background-color: #202020;
   color: rgb(237, 237, 237);
 }
+
 #root {
   background-color: #202020;
 }
@@ -180,11 +181,7 @@ body {
 @media screen and (max-width: 1024px) {
   body, .layout-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     min-height: 100vh;
-    margin: 0;
   }
 
   .social-icons {
@@ -213,5 +210,11 @@ body {
     justify-content: flex-start; /* <-- instead of "left", use "flex-start" */
     padding-left: 0px;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Shat-webpage {
+    overflow-x: hidden;
   }
 }
