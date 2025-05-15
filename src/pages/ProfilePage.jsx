@@ -6,8 +6,16 @@ import emailjs from '@emailjs/browser';
 
 export function ProfilePage() {
     const location = useLocation();
-    const name = location.state?.name || '';
+    const [name, setName] = useState('');
     const form = useRef();
+
+    useEffect(() => {
+        // Check first from navigation state, then localStorage
+        const stateName = location.state?.name;
+        const storedName = localStorage.getItem('username');
+        setName(stateName || storedName || '');
+    }, [location]);
+    
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_5ua09f6', 'template_nuyz2y9', form.current, 'hHevB0Sc509ZhaCD8')

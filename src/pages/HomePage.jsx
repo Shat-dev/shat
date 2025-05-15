@@ -10,6 +10,11 @@ export function HomePage() {
 
   useEffect(() => {
     document.body.classList.add('homepage-body');
+    // Load saved name from localStorage
+    const savedName = localStorage.getItem('username');
+    if (savedName) {
+      setName(savedName);
+    }
     return () => {
       document.body.classList.remove('homepage-body');
     };
@@ -24,11 +29,10 @@ export function HomePage() {
     }
 
     setError('');
-    if (trimmedName) {
-      navigate('/main', { state: { name: trimmedName } });
-    } else {
-      navigate('/main');
-    }
+    // Save name to localStorage
+    localStorage.setItem('username', trimmedName);
+
+    navigate('/main', { state: { name: trimmedName } });
   };
 
   const handleKeyDown = (e) => {
